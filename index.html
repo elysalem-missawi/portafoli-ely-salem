@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ely Salem | Portafolio Web</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Botón Modo Oscuro -->
+  <button id="toggleTheme" class="dark-toggle">🌙 Modo Oscuro</button>
+
+  <!-- Menú Hamburguesa -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Ely Salem EL Missawi</div>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" title="Abrir menú">
+        <span class="hamburger-box">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#quien-somos">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#formacion">Formación</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Slider de Imágenes (Portada) -->
+  <section class="slider-section">
+    <div class="slider-content">
+      <h1 class="slider-title">Hola, soy Ely Salem</h1>
+      <p class="slider-subtitle">Desarrollador Web | HTML, CSS, JavaScript & WordPress</p>
+      <a href="#contacto" class="slider-cta">Contáctame</a>
+    </div>
+    <div class="slider" id="slider">
+      <button class="slider-btn slider-btn-prev" id="sliderPrev" aria-label="Anterior">&#10094;</button>
+      <div class="slider-images">
+        <img src="imegs/imge1.jpg" alt="Foto profesional Ely Salem" class="slider-img active">
+        <img src="imegs/imge2.jpg" alt="Ely Salem trabajando" class="slider-img">
+      </div>
+      <button class="slider-btn slider-btn-next" id="sliderNext" aria-label="Siguiente">&#10095;</button>
+    </div>
+    <div class="slider-dots" id="sliderDots"></div>
+  </section>
+
+  <!-- Sobre mí -->
+  <section id="quien-somos" class="section">
+    <h2>Sobre mí</h2>
+    <p>¡Hola! Soy <strong>Ely Salem</strong>, desarrollador web con experiencia en HTML, CSS, JavaScript y WordPress. Me
+      apasiona crear sitios web modernos, funcionales y accesibles, adaptados a las necesidades de cada cliente.</p>
+    <ul>
+      <li><strong>Formación:</strong> Instituto de Europa (Vitoria-Gasteiz), CEA Formación</li>
+      <li><strong>Especialidad:</strong> Desarrollo web, diseño responsive, optimización y WordPress</li>
+      <li><strong>Ubicación:</strong> Vitoria-Gasteiz, España</li>
+    </ul>
+  </section>
+
+  <!-- Proyectos destacados -->
+  <section id="proyectos" class="section">
+    <h2>Proyectos destacados</h2>
+    <div class="gallery">
+      <img src="imegs/imge1.jpg" alt="Proyecto 1: Portafolio Ely Salem" title="Portafolio Ely Salem">
+      <img src="imegs/imge2.jpg" alt="Proyecto 2: Web Corporativa" title="Web Corporativa">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Proyecto 3: WordPress Creativo" title="WordPress Creativo">
+    </div>
+  </section>
+
+  <!-- Formación -->
+  <section id="formacion" class="section">
+    <h2>Formación</h2>
+    <ul>
+      <li><strong>Instituto de Europa</strong> (Vitoria-Gasteiz): Desarrollo Web</li>
+      <li><strong>CEA Formación</strong>: Especialización en tecnologías web y WordPress</li>
+    </ul>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <form class="contact-form">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <div class="contact-info">
+      <p><strong>Email:</strong> elysalem.dev@gmail.com</p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com" target="_blank">linkedin.com/in/elysalem</a></p>
+      <p><strong>Ubicación:</strong> Vitoria-Gasteiz, España</p>
+    </div>
+  </section>
+
+  <!-- Footer profesional -->
+  <footer>
+    <div class="footer-content">
+      <nav class="footer-menu">
+        <a href="#quien-somos">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#formacion">Formación</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><span>📘</span></a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><span>🐦</span></a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><span>📸</span></a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><span>💼</span></a>
+      </div>
+      <div class="footer-copy">&copy; 2025 Ely Salem. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

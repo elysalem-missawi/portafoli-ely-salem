@@ -619,6 +619,115 @@ body.dark .contact-info {
   background: rgba(35,39,47,0.85);
 }
 
+/* Servicios */
+.servicios-section {
+  margin-top: 2rem;
+}
+.servicios-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.servicio-card {
+  background: linear-gradient(120deg, #23272f 60%, #2196f3 100%);
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px #2196f366;
+  padding: 2rem 1.5rem 1.5rem;
+  text-align: center;
+  transition: transform 0.18s, box-shadow 0.18s;
+  border: 2px solid var(--accent-color);
+}
+.servicio-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 32px #2196f399;
+}
+.servicio-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+.servicio-card h3 {
+  font-family: 'Raleway', 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+  color: var(--accent-color);
+}
+.servicio-card p {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  opacity: 0.92;
+}
+@media (min-width: 600px) {
+  .servicios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .servicios-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Experiencia */
+.experiencia-section {
+  margin-top: 2rem;
+}
+.experiencia-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.exp-card {
+  background: linear-gradient(120deg, #23272f 60%, #ff9800 100%);
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px #ff980066;
+  padding: 2rem 1.5rem 1.5rem;
+  text-align: center;
+  transition: transform 0.18s, box-shadow 0.18s;
+  border: 2px solid var(--accent-color);
+}
+.exp-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 32px #ff980099;
+}
+.exp-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 2px 8px #23272f88);
+}
+.exp-card h3 {
+  font-family: 'Raleway', 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  color: var(--accent-color);
+}
+.exp-card p {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  opacity: 0.92;
+}
+@media (min-width: 600px) {
+  .experiencia-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .experiencia-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 @media (max-width: 600px) {
   .logo {
     white-space: nowrap;

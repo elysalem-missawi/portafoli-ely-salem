@@ -1,7 +1,10 @@
+/* Importación de fuentes elegantes */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400&family=Raleway:ital,wght@1,400&display=swap');
 
-/* Variables de color por modo */
+/* =====================
+   Variables de color
+   ===================== */
 :root {
   --bg-color: #ffffff;
   --text-color: #222222;
@@ -18,7 +21,6 @@
   --info: #2196f3;
   --warning: #ffc107;
 }
-
 body.dark {
   --bg-color: #121212;
   --text-color: #f0f0f0;
@@ -36,21 +38,39 @@ body.dark {
   --warning: #ffe082;
 }
 
+/* =====================
+   Tipografía base
+   ===================== */
+body, .section p, .slider-subtitle, .footer-copy {
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.slider-title,
+.section h2,
+.section-title,
+.accordion-header {
+  font-family: 'Raleway', 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* =====================
+   Elementos generales
+   ===================== */
 body {
   margin: 0;
-  font-family: 'Montserrat', Arial, sans-serif;
   background: var(--bg-color);
   color: var(--text-color);
   transition: background 0.3s, color 0.3s;
   scroll-behavior: smooth;
 }
-
 a {
   color: var(--link-color);
   text-decoration: none;
 }
 
-/* Botón modo oscuro - Estilo mejorado */
+/* =====================
+   Botón modo oscuro
+   ===================== */
 .dark-toggle {
   position: fixed;
   bottom: 28px;
@@ -74,14 +94,12 @@ a {
   border: 2.5px solid #fff;
   letter-spacing: 0.5px;
 }
-
 .dark-toggle:hover {
   background: linear-gradient(135deg, var(--info), var(--accent-color));
   transform: scale(1.12) rotate(-8deg);
   box-shadow: 0 10px 32px #2196f399, 0 2px 8px #ff980088;
   color: #fffbe7;
 }
-
 @media (max-width: 600px) {
   .dark-toggle {
     width: 44px;
@@ -92,7 +110,9 @@ a {
   }
 }
 
-/* Navbar */
+/* =====================
+   Navbar y menú
+   ===================== */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -107,9 +127,7 @@ a {
   transition: box-shadow 0.3s, background 0.3s, color 0.3s, height 0.3s;
   height: 64px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.18);
-
 }
-
 .navbar.scrolled {
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
   background: linear-gradient(90deg, #2196f3 0%, #ff9800 100%);
@@ -117,19 +135,23 @@ a {
   height: 90px;
   z-index: 2000;
 }
-
 .logo {
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-weight: 400;
   font-size: 2rem;
-  font-weight: bold;
   color: #ff9800;
   letter-spacing: 2px;
   z-index: 2100;
   text-shadow: 0 2px 8px #2196f3, 0 1px 0 #fff;
 }
-
+@media (max-width: 600px) {
+  .logo {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
 .nav-links {
   display: flex;
   gap: 1rem;
@@ -137,11 +159,9 @@ a {
   z-index: 2100;
   padding:2rem ;
 }
-
 .nav-links a {
   font-weight: bold;
 }
-
 .hamburger {
   display: none;
   background: none;
@@ -152,7 +172,7 @@ a {
   position: relative;
   z-index: 2100;
   padding: 0;
-      margin: 2rem;
+  margin: 2rem;
   outline: none;
 }
 .hamburger-box {
@@ -187,8 +207,6 @@ a {
     display: block;
   }
 }
-
-/* Responsive nav */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -233,7 +251,9 @@ a {
   }
 }
 
-/* Secciones */
+/* =====================
+   Secciones generales
+   ===================== */
 .section {
   padding: 6rem 1rem 3rem;
   max-width: 900px;
@@ -245,7 +265,9 @@ a {
   margin-top: 110px;
 }
 
-/* Slider */
+/* =====================
+   Slider principal
+   ===================== */
 .slider-section {
   position: relative;
   width: 100%;
@@ -411,7 +433,122 @@ a {
   }
 }
 
-/* Acordeón */
+/* =====================
+   Sección Servicios
+   ===================== */
+.servicios-section {
+  margin-top: 2rem;
+}
+.servicios-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.servicio-card {
+  background: linear-gradient(120deg, #23272f 60%, #2196f3 100%);
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px #2196f366;
+  padding: 2rem 1.5rem 1.5rem;
+  text-align: center;
+  transition: transform 0.18s, box-shadow 0.18s;
+  border: 2px solid var(--accent-color);
+}
+.servicio-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 32px #2196f399;
+}
+.servicio-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+.servicio-card h3 {
+  font-family: 'Raleway', 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+  color: var(--accent-color);
+}
+.servicio-card p {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  opacity: 0.92;
+}
+@media (min-width: 600px) {
+  .servicios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .servicios-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* =====================
+   Sección Experiencia
+   ===================== */
+.experiencia-section {
+  margin-top: 2rem;
+}
+.experiencia-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.exp-card {
+  background: linear-gradient(120deg, #23272f 60%, #ff9800 100%);
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px #ff980066;
+  padding: 2rem 1.5rem 1.5rem;
+  text-align: center;
+  transition: transform 0.18s, box-shadow 0.18s;
+  border: 2px solid var(--accent-color);
+}
+.exp-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 32px #ff980099;
+}
+.exp-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 2px 8px #23272f88);
+}
+.exp-card h3 {
+  font-family: 'Raleway', 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  color: var(--accent-color);
+}
+.exp-card p {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  opacity: 0.92;
+}
+@media (min-width: 600px) {
+  .experiencia-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .experiencia-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* =====================
+   Acordeón
+   ===================== */
 .accordion-item {
   border-bottom: 1px solid #ccc;
 }
@@ -437,7 +574,9 @@ a {
   padding: 1rem;
 }
 
-/* Galería */
+/* =====================
+   Galería de proyectos
+   ===================== */
 .gallery {
   display: grid;
   gap: 1rem;
@@ -463,7 +602,9 @@ a {
   }
 }
 
-/* Lightbox */
+/* =====================
+   Lightbox
+   ===================== */
 .lightbox {
   position: fixed;
   top: 0;
@@ -493,7 +634,9 @@ a {
   cursor: pointer;
 }
 
-/* Footer profesional */
+/* =====================
+   Footer profesional
+   ===================== */
 footer {
   background: linear-gradient(135deg, #181c22 60%, #2196f3 80%, #ff9800 100%);
   color: #fff;
@@ -549,7 +692,9 @@ footer {
   text-shadow: 0 2px 12px #000, 0 1px 0 #2196f3;
 }
 
-/* Formulario de contacto */
+/* =====================
+   Formulario de contacto
+   ===================== */
 .contact-form {
   background: rgba(255,255,255,0.85);
   border-radius: 12px;
@@ -617,134 +762,4 @@ body.dark .contact-form {
 }
 body.dark .contact-info {
   background: rgba(35,39,47,0.85);
-}
-
-/* Servicios */
-.servicios-section {
-  margin-top: 2rem;
-}
-.servicios-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  margin-top: 2.5rem;
-}
-.servicio-card {
-  background: linear-gradient(120deg, #23272f 60%, #2196f3 100%);
-  color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 16px #2196f366;
-  padding: 2rem 1.5rem 1.5rem;
-  text-align: center;
-  transition: transform 0.18s, box-shadow 0.18s;
-  border: 2px solid var(--accent-color);
-}
-.servicio-card:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 6px 32px #2196f399;
-}
-.servicio-icon {
-  font-size: 2.5rem;
-  display: block;
-  margin-bottom: 1rem;
-}
-.servicio-card h3 {
-  font-family: 'Raleway', 'Playfair Display', serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1.3rem;
-  margin-bottom: 0.7rem;
-  color: var(--accent-color);
-}
-.servicio-card p {
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1rem;
-  color: #fff;
-  opacity: 0.92;
-}
-@media (min-width: 600px) {
-  .servicios-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 900px) {
-  .servicios-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* Experiencia */
-.experiencia-section {
-  margin-top: 2rem;
-}
-.experiencia-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  margin-top: 2.5rem;
-}
-.exp-card {
-  background: linear-gradient(120deg, #23272f 60%, #ff9800 100%);
-  color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 16px #ff980066;
-  padding: 2rem 1.5rem 1.5rem;
-  text-align: center;
-  transition: transform 0.18s, box-shadow 0.18s;
-  border: 2px solid var(--accent-color);
-}
-.exp-card:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 6px 32px #ff980099;
-}
-.exp-icon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 1rem;
-  filter: drop-shadow(0 2px 8px #23272f88);
-}
-.exp-card h3 {
-  font-family: 'Raleway', 'Playfair Display', serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1.2rem;
-  margin-bottom: 0.7rem;
-  color: var(--accent-color);
-}
-.exp-card p {
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1rem;
-  color: #fff;
-  opacity: 0.92;
-}
-@media (min-width: 600px) {
-  .experiencia-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 900px) {
-  .experiencia-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .logo {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
-.slider-title,
-.section h2,
-.section-title,
-.accordion-header {
-  font-family: 'Raleway', 'Playfair Display', serif;
-  font-style: italic;
-  font-weight: 400;
-}
-
-body, .section p, .slider-subtitle, .footer-copy {
-  font-family: 'Montserrat', Arial, sans-serif;
 }

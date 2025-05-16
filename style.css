@@ -104,6 +104,7 @@ a {
   transition: box-shadow 0.3s, background 0.3s, color 0.3s, height 0.3s;
   height: 64px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+
 }
 
 .navbar.scrolled {
@@ -128,6 +129,7 @@ a {
   gap: 1rem;
   list-style: none;
   z-index: 2100;
+  margin: 2rem;
 }
 
 .nav-links a {
@@ -144,6 +146,7 @@ a {
   position: relative;
   z-index: 2100;
   padding: 0;
+      margin: 3rem;
   outline: none;
 }
 .hamburger-box {
@@ -179,6 +182,7 @@ a {
   }
 }
 
+
 /* Responsive nav */
 @media (max-width: 768px) {
   .nav-links {
@@ -198,6 +202,7 @@ a {
     padding: 1rem 0.5rem;
     animation: navSlideIn 0.35s cubic-bezier(.68,-0.55,.27,1.55);
     z-index: 2100;
+    margin: 0;
   }
   .nav-links.active {
     display: flex;
